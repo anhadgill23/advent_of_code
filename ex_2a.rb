@@ -19,3 +19,4 @@ end
 
 output = counter[2] * counter[3]
 puts "The answer is #{output}."
+

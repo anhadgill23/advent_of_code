@@ -2,15 +2,18 @@ let boxIDs = ['rvefnvyxzbodgpnpkumawhijsc', 'rvefqtyxzsddglnppumawhijsc', 'rvefq
 
   for (let item of boxIDs) {
     let lettersA = item.split('');
+
     for (let i = boxIDs.indexOf(item) + 1; i < boxIDs.length; i++) {
       let lettersB = boxIDs[i].split('');
       let counter = 0;
+
       for (let j = 0; j < boxIDs[0].length; j++) {
         if (lettersA[j] != lettersB[j]) {
           counter++
           lettersB.splice(j, 1, '0')
         }
       }
+
       if ( counter == 1 ) {
         for (char in lettersB) {
           if (char == 0) {
